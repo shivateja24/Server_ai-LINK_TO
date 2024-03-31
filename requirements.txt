@@ -8,4 +8,3 @@ pydantic
 pytz
 psycopg2
 pymysql
-index
