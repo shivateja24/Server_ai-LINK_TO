@@ -541,7 +541,7 @@ def handle_query():
         query = data.get('query')
         print("Received query:", query)
         query_queue.put(query)
-        return jsonify("Query queued successfully.")
+        return jsonify("Query queued successfully.",query)
     except Exception as e:
         print("Error handling query request:", e)
         return jsonify("Error: Could not queue query.")
