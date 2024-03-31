@@ -518,15 +518,14 @@ app1 = workflow.compile()
 from flask import Flask, request, jsonify
 from queue import Queue
 from threading import Thread
-from index import app, cursor, connection
-
+ 
 app = Flask(__name__)
 query_queue = Queue()
 
 def process_query(query):
     try:
         print("Processing query:", query)
-        result = app.invoke({"message": query})
+        result = app1.invoke({"message": query})
         print(result["final_sql_query"].sql_query)
 
         cursor.execute(result["final_sql_query"].sql_query)
