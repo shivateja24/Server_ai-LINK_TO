@@ -1,2 +1,12 @@
 Flask
+langchain
+langchain-core
+langchain-google-genai
+langchain-output-parsers
+langgraph
+ipython
 pyodbc
+pydantic
+pytz
+psycopg2
+google-api-python-client
