@@ -527,6 +527,7 @@ def process_query(query):
         print("Processing query:", query)
         result = app1.invoke({"message": query})
         print(result["final_sql_query"].sql_query)
+        cursor=connection.cursor()
 
         cursor.execute(result["final_sql_query"].sql_query)
         connection.commit()
