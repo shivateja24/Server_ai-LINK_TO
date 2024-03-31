@@ -1,0 +1,8 @@
+flask
+langchain-google-genai
+langchain
+langgraph
+pyodbc
+pytz
+typing
+google-generativeai
