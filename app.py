@@ -1,5 +1,20 @@
 from flask import Flask
 from datetime import datetime
+import pathlib
+import textwrap
+
+
+from IPython.display import display
+from IPython.display import Markdown
+import pyodbc
+
+
+# Connection string
+connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:link-to-database.database.windows.net,1433;Database=link-to;Uid=root1;Pwd=Shiva242004;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+# Establish connection
+connection = pyodbc.connect(connection_string)
+print("Connection to SQL Server successful")
+
 
 app = Flask(__name__)
 
